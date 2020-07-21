@@ -24,7 +24,10 @@ public class Library {
         return this.capacity > this.bookCount();
     }
 
-    public void loanBook() {
-        this.books.remove(0);
+    public Book loanBook() {
+        if(this.bookCount() > 0) {
+            return this.books.remove(0);
+        }
+        return null;
     }
 }
