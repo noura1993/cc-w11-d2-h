@@ -42,5 +42,13 @@ public class LibraryTest {
         assertFalse(library.checkCapacity());
     }
 
+    @Test
+    public void loanBook() {
+        library.addBook(book1);
+        library.addBook(book2);
+        library.loanBook();
+        assertEquals(1, library.bookCount());
+    }
+
 
 }

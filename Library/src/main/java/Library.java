@@ -21,4 +21,8 @@ public class Library {
     public boolean checkCapacity() {
         return this.capacity > this.bookCount();
     }
+
+    public void loanBook() {
+        this.books.remove(0);
+    }
 }
